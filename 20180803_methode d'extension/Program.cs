@@ -6,10 +6,43 @@ using System.Threading.Tasks;
 
 namespace _20180803_methode_d_extension
 {
-    class Program
+
+    public static class StringExtension //niveau superieur!
     {
-        static void Main(string[] args)
+        public static string SupprimerLesEspaces(this string chaine)// this active extension
         {
+            return chaine.Replace(" ", "");
         }
+        public static bool EstVIde(this string chaine)
+        {
+            return string.IsNullOrEmpty(chaine);
+        }
+
     }
+
+
+        class Program
+
+        {
+
+
+            static void Main(string[] args)
+            {
+
+                var chaine = "hjkdjhk jhjkhjk jhkjhj jkhjkh  z";
+                chaine = chaine.SupprimerLesEspaces();//this string donc inversion
+                Console.WriteLine(chaine);
+
+
+
+            }
+
+
+
+        
+            
+
+
+        }
+    
 }
